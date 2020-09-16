@@ -5,9 +5,9 @@ import ToDoForm from "./ToDoForm";
 
 test("There is a text box and submit button on the page", () => {
   render(<ToDoForm />);
-  const textbox = screen.getAllByRole("textbox");
-  const button = screen.getAllByRole("button", { name: /Submit/ });
+  const textbox = screen.getByRole("textbox");
+  const button = screen.getByRole("button", { name: /Submit/ });
 
-  expect(textbox).ToBeInTheDocument();
-  expect(button).ToBeInTheDocument();
+  expect(textbox).toBeInTheDocument();
+  expect(button).toBeInTheDocument();
 });
